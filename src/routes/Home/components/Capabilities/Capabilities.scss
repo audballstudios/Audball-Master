@@ -1,0 +1,76 @@
+@import '../../../../styles/variables';
+
+.section_capabilities {
+    background-color: $gray;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.capabilities {
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 88px;
+    }
+
+    &__item {
+        width: 230px;
+        margin-right: 35px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &__card {
+            border-radius: 10px;
+            background-color: $white;
+            height: 318px;
+            padding: 66px 14px 14px 14px;
+            position: relative;
+
+            &__circle {
+                width: 94px;
+                height: 94px;
+                background-color: $base-color;
+                border-radius: 50%;
+                position: absolute;
+                left: 14px;
+                top: -41px;
+            }
+
+            &__category {
+                font-size: 16px;
+                font-weight: $font-bold;
+                margin-bottom: 1px;
+            }
+
+            &__title {
+                font-size: 20px;
+                font-weight: $font-bold;
+                height: 82px;
+            }
+
+            &__includes {
+                font-size: 18px;
+                line-height: 1.06;
+                position: relative;
+
+                p {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            &__line {
+                height: 30px;
+                width: 6px;
+                background-color: $base-color;
+                position: absolute;
+                left: -14px;
+                top: 0;
+            }
+        }
+        
+    }
+}

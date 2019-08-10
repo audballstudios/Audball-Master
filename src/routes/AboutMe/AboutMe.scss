@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.aboutme {
+
+    &__topSection {
+        height: 568px;
+        background-image: url('../../img/about-top-bg.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-color: $gray;
+        padding-top: 69px;
+        padding-bottom: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__intro {
+            width: 514px;
+            font-size: 35px;
+            line-height: 1.14;
+            margin-right: 139px;
+        }
+
+        &__pic {
+            position: relative;
+
+            &__img {
+                border: 8px solid $gray;
+                background-color: $gray;
+                border-radius: 50%;
+                width: 359.8px;
+                height: 356px;
+                display: block;
+            }
+
+            &__signature {
+                position: absolute;
+                right: -44px;
+                bottom: -94px;
+            }
+        }
+    }
+
+    &__bottomSection {
+        padding-bottom: 40px;
+    }
+}

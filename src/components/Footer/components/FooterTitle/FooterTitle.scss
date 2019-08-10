@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+
+.footerTitle {
+
+    &_main {        
+        margin-bottom: 9px;
+    }
+
+    &_underlined {
+        font-size: 22px;
+        color: #eeeae6;
+        
+        &_line {
+            height: 2px;
+            background-color: $red;
+            margin-top: 7px;
+        }
+    }
+}
