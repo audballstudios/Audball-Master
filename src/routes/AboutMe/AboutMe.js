@@ -5,6 +5,7 @@ import CallToAction from '../../components/CallToAction/CallToAction';
 
 import audrey from '../../img/audrey.png';
 import signature from '../../img/signature-dark.png';
+import arrow from '../../img/down-arrow.png';
 
 import './AboutMe.scss';
 
@@ -21,6 +22,7 @@ class AboutMe extends Component {
             <img src={audrey} alt="audrey" className="aboutme__topSection__pic__img" />
             <img src={signature} alt="signature" className="aboutme__topSection__pic__signature" />
           </div>
+          <img src={arrow} className="aboutme__downArrow" />
         </div>
         <div className="aboutme__bottomSection">
           {AboutConfig.map((item, key) => (

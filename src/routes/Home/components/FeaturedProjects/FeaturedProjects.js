@@ -7,27 +7,20 @@ import trueNorth from '../../../../img/projects-thumbs/true-north-3.png';
 import windfall from '../../../../img/projects-thumbs/windfall.png';
 import zk from '../../../../img/projects-thumbs/zk-1.png';
 
+import casa from '../../../../img/projects-thumbs/casa-1.png';
+import cd from '../../../../img/projects-thumbs/chicken-dinner-1.png';
+import heal from '../../../../img/projects-thumbs/heal-2.png';
+import ibynd from '../../../../img/projects-thumbs/ibynd-1.png';
+
 import './FeaturedProjects.scss';
 
 class FeaturedProjects extends Component {
   render () {
     const FeaturedProjects1 = [{
-      slug: 'parachute-ventures',
-      name: 'Parachute Ventures',
-      brif: 'Presentation deck design',
-      img: pv
-    },
-    {
-      slug: 'true-north',
-      name: 'True North',
+      slug: 'casa-planta',
+      name: 'Casa Planta',
       brif: 'Branding, logo design, packaging design',
-      img: trueNorth
-    },
-    {
-      slug: 'windfall',
-      name: 'Windfall',
-      brif: 'Website design, mobile design, UI/UX design, product design, logo design',
-      img: windfall
+      img: casa
     },
     {
       slug: 'zest-kitchen',
@@ -36,10 +29,28 @@ class FeaturedProjects extends Component {
       img: zk
     },
     {
-      slug: 'parachute-ventures',
-      name: 'Parachute Ventures',
-      brif: 'Presentation deck design',
-      img: pv
+      slug: 'true-north',
+      name: 'True North',
+      brif: 'Branding, logo design, packaging design',
+      img: trueNorth
+    },
+    {
+      slug: 'heal',
+      name: 'Heal',
+      brif: 'Branding, logo design, packaging design, email template design',
+      img: heal
+    },
+    {
+      slug: 'casa-planta',
+      name: 'Casa Planta',
+      brif: 'Branding, logo design, packaging design',
+      img: casa
+    },
+    {
+      slug: 'zest-kitchen',
+      name: 'Zest Kitchen',
+      brif: 'Branding, logo design, website design, mobile design, UI/UX design',
+      img: zk
     },
     {
       slug: 'true-north',
@@ -48,16 +59,59 @@ class FeaturedProjects extends Component {
       img: trueNorth
     },
     {
+      slug: 'heal',
+      name: 'Heal',
+      brif: 'Branding, logo design, packaging design, email template design',
+      img: heal
+    }];
+
+    const FeaturedProjects2 = [{
+      slug: 'ibynd',
+      name: 'iBynd',
+      brif: 'Branding, logo design, website design, UI/UX design',
+      img: ibynd
+    },
+    {
+      slug: 'parachute-ventures',
+      name: 'Parachute Ventures',
+      brif: 'Presentation deck design',
+      img: pv
+    },
+    {
       slug: 'windfall',
       name: 'Windfall',
       brif: 'Website design, mobile design, UI/UX design, product design, logo design',
       img: windfall
     },
     {
-      slug: 'zest-kitchen',
-      name: 'Zest Kitchen',
-      brif: 'Branding, logo design, website design, mobile design, UI/UX design',
-      img: zk
+      slug: 'chicken-dinner',
+      name: 'Chicken Dinner',
+      brif: 'Logo design, mobile design, UI/UX design, product design',
+      img: cd
+    },
+    {
+      slug: 'ibynd',
+      name: 'iBynd',
+      brif: 'Branding, logo design, website design, UI/UX design',
+      img: ibynd
+    },
+    {
+      slug: 'parachute-ventures',
+      name: 'Parachute Ventures',
+      brif: 'Presentation deck design',
+      img: pv
+    },
+    {
+      slug: 'windfall',
+      name: 'Windfall',
+      brif: 'Website design, mobile design, UI/UX design, product design, logo design',
+      img: windfall
+    },
+    {
+      slug: 'chicken-dinner',
+      name: 'Chicken Dinner',
+      brif: 'Logo design, mobile design, UI/UX design, product design',
+      img: cd
     }];
 
     return (
@@ -75,14 +129,14 @@ class FeaturedProjects extends Component {
           ))}
         </div>
         <div className="projects_row second_row">
-          {FeaturedProjects1.map((item, key) => (
-            <div className="projects_row__item" key={key}>
+          {FeaturedProjects2.map((item, key) => (
+            <Link to={`/projects/${item.slug}`} className="projects_row__item" key={key}>
               <div className="projects_row__item__overlay">
                 <div className="project_name">{item.name}</div>
                 <div className="project_brif">{item.brif}</div>
               </div>
               <img src={item.img} alt={item.name} className="projects_row__img" />
-            </div>
+            </Link>
           ))}
         </div>
       </div>

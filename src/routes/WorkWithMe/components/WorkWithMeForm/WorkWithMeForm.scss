@@ -1,0 +1,109 @@
+@import '../../../../styles/variables';
+
+.form_wrapper {
+    background-color: $white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18);
+    padding: 107px 154px 107px 145px;
+    width: 871px;
+    position: relative;
+    z-index: 1;
+}
+
+.form_group {
+    margin-bottom: 28px;
+
+    .form_label {
+        margin-bottom: 8px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: $font-bold;
+        display: block;
+
+        small {
+            text-transform: lowercase;
+            font-size: 15px;
+        }
+    }
+
+    .form_input {
+        width: 100%;
+        border-radius: 7px;
+        border: 3px solid $gray;
+        font-size: 18px;
+        color: $black;
+        padding: 12px;
+        outline: none;
+        transition: all 0.5s;
+        font-family: 'New York Small';
+
+        &:focus {
+            border-color: $input-focus;
+        }
+    }
+
+    .form_input:not(textarea) {
+        height: 55.9px;    
+    }
+
+    textarea.form_input {
+        height: 206px;
+        resize: none;
+    }
+}
+
+.form_checkbox {
+    position: relative;
+    margin-bottom: 18px;
+
+    .form_checkbox_checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .form_checkbox_label {
+        position: relative;
+        line-height: 31px;
+        display: block;
+        padding-left: 41px;
+        font-size: 18px;
+        font-weight: $font-bold;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 31.4px;
+            border-radius: 7px;
+            border: solid 3px $gray;
+            transition: all 0.5s;
+            background-color: $white;
+        }
+
+    }
+    .form_checkbox_checkbox:checked~.form_checkbox_label::before  {        
+        background-color: $checkbox-checked;
+    }
+}
+
+.services_row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+
+.form_submitBtn {
+    height: 55.9px;
+    border-radius: 30px;
+    background-color: $red;
+    width: 100%;
+    font-size: 24px;
+    font-weight: $font-bold;
+    color: $white;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+}

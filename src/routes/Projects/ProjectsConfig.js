@@ -90,8 +90,8 @@ export default [{
 },
 {
   id: 7,
-  slug: 'parachute-venutes',
-  title: 'Parachute Venutes',
+  slug: 'parachute-ventures',
+  title: 'Parachute ventures',
   brif: 'presentation deck design',
   details: 'Parachute Ventures is a game development studio located in Austin, Texas. PV unifies development, design and strategy to create award-winning digital products. They specialize in mobile games, machine learning, blockchain and web development. \n \n Parachute Ventures hired me to create a simple presentation deck for their upcoming capital raise. My goal was to emphasize the unique approach PV offers with their team of diverse and seasoned experts.',
   images: [{

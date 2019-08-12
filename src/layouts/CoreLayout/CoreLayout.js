@@ -12,6 +12,10 @@ import '../../styles/styles.scss';
 
 const routes = [
   {
+    path: AppPaths.HOME_PATH,
+    component: Home
+  },
+  {
     path: AppPaths.HOMEPAGE,
     component: Home
   },
@@ -30,6 +34,10 @@ const routes = [
 ];
 
 class CoreLayout extends Component {
+  componentDidMount () {
+    window.scrollTo(0, 0);
+  }
+
   render () {
     return (
       <Router>
@@ -39,6 +47,7 @@ class CoreLayout extends Component {
             <Route
               path={route.path}
               key={i}
+              exact
               render={props => (
                 <route.component {...props} routes={route.routes} />
               )}

@@ -39,3 +39,11 @@ $bold: '../fonts/Sofia-Pro-Bold/Sofia Pro Bold';
 	font-style:   normal;
 	font-weight:  $font-bold;
   }
+
+  @font-face {
+	font-family: 'New York Small';
+	src: url('../fonts/NewYorkSmall-Regular.otf') format('opentype');
+	
+	font-style:   normal;
+	font-weight:  normal;
+  }

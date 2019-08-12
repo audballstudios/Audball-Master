@@ -1,117 +1,40 @@
 import React, { Component } from 'react';
+import WorkWithMeForm from './components/WorkWithMeForm/WorkWithMeForm';
+import ThankYou from './components/ThankYou/ThankYou';
 
 import './WorkWithMe.scss';
 
 class WorkWithMe extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      formSubmited: false
+    };
+
+    this.formSubmited = this.formSubmited.bind(this);
+  }
+
+  formSubmited (e) {
+    this.setState({ formSubmited: true });
+  }
+
   render () {
+    const Submited = this.state.formSubmited;
+
+    console.log(Submited);
+
+    let form;
+
+    if (Submited) {
+      form = <ThankYou />;
+    } else {
+      form = <WorkWithMeForm formSubmited={this.formSubmited} />;
+    }
+
     return (
       <div className="section_workWithMe">
-        <div className="form_wrapper">
-          <form onSubmit={this.handleSubmit}>
-            <div className="form_group">
-              <label className="form_label">Name</label>
-              <input type="text" className="form_input" />
-            </div>
-            <div className="form_group">
-              <label className="form_label">Email Address</label>
-              <input type="text" className="form_input" />
-            </div>
-            <div className="form_group">
-              <label className="form_label">Phone Number</label>
-              <input type="text" className="form_input" />
-            </div>
-            <div className="form_group">
-              <label className="form_label">Phone Number</label>
-              <textarea className="form_input" />
-            </div>
-            <div className="form_group">
-              <label className="form_label">Services Needed <small>(check all that apply):</small></label>
-              <div className="services_row">
-                <div className="services_col">
-                  <div className="form_checkbox">
-                    <input
-                      name="digitalDesign"
-                      id="digitalDesign"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="digitalDesign">digital design</label>
-                  </div>
-                  <div className="form_checkbox">
-                    <input
-                      name="printDesign"
-                      id="printDesign"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="printDesign">print design</label>
-                  </div>
-                  <div className="form_checkbox">
-                    <input
-                      name="logoDesign"
-                      id="logoDesign"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="logoDesign">logo design</label>
-                  </div>
-                </div>
-
-                <div className="services_col">
-                  <div className="form_checkbox">
-                    <input
-                      name="uxDesign"
-                      id="uxDesign"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="uxDesign">UX design</label>
-                  </div>
-                  <div className="form_checkbox">
-                    <input
-                      name="signageDesign"
-                      id="signageDesign"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="signageDesign">signage design</label>
-                  </div>
-                  <div className="form_checkbox">
-                    <input
-                      name="notSure"
-                      id="notSure"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="notSure">not sure</label>
-                  </div>
-                </div>
-
-                <div className="services_col">
-                  <div className="form_checkbox">
-                    <input
-                      name="branding"
-                      id="branding"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="branding">branding</label>
-                  </div>
-                  <div className="form_checkbox">
-                    <input
-                      name="packaging"
-                      id="packaging"
-                      type="checkbox"
-                      className="form_checkbox_checkbox"
-                    />
-                    <label className="form_checkbox_label" htmlFor="packaging">packaging</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <input type="submit" value="Submit" className="form_submitBtn" />
-          </form>
-        </div>
+        {form}
       </div>
     );
   }
