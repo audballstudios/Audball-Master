@@ -9,6 +9,11 @@ import CallToAction from '../../components/CallToAction/CallToAction';
 import './Home.scss';
 
 class Home extends Component {
+  componentDidMount () {
+    this.props.callbackFromParent({ home: true });
+    window.scrollTo(0, 0);
+  }
+
   render () {
     return (
       <div>

@@ -10,6 +10,12 @@ import arrow from '../../img/down-arrow.png';
 import './AboutMe.scss';
 
 class AboutMe extends Component {
+
+  componentDidMount () {
+    this.props.callbackFromParent({ home: false });
+    window.scrollTo(0, 0);
+  }
+
   render () {
     return (
       <div className="section_aboutme">

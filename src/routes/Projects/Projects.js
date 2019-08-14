@@ -5,6 +5,11 @@ import HeaderUnderlined from '../../components/HeaderUnderlined/HeaderUnderlined
 import './Projects.scss';
 
 class Projects extends Component {
+  componentDidMount () {
+    this.props.callbackFromParent({ home: false });
+    window.scrollTo(0, 0);
+  }
+
   render () {
     const { match } = this.props;
     const projectId = match.params.id;

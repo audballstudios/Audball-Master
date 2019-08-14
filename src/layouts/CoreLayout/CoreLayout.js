@@ -34,22 +34,43 @@ const routes = [
 ];
 
 class CoreLayout extends Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      listDataFromChild: null,
+      activeClass: ''
+    };
+    this.myCallback = this.myCallback.bind(this);
+  }
+
+  myCallback = (dataFromChild) => {
+    this.setState({ listDataFromChild: dataFromChild.home });
+  }
+
   componentDidMount () {
-    window.scrollTo(0, 0);
+    window.addEventListener('scroll', () => {
+      if (this.state.listDataFromChild === true) {
+        let activeClass = '';
+        if (window.scrollY === 0) {
+          activeClass = 'navbar__transparent';
+        }
+        this.setState({ activeClass });
+      }
+    });
   }
 
   render () {
     return (
       <Router>
         <div>
-          <Navbar />
+          <Navbar activeclassname={this.state.activeClass} />
           {routes.map((route, i) => (
             <Route
               path={route.path}
               key={i}
               exact
               render={props => (
-                <route.component {...props} routes={route.routes} />
+                <route.component callbackFromParent={this.myCallback} {...props} routes={route.routes} />
               )}
             />
           ))}

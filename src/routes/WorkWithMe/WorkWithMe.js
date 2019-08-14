@@ -15,14 +15,18 @@ class WorkWithMe extends Component {
     this.formSubmited = this.formSubmited.bind(this);
   }
 
+  componentDidMount () {
+    this.props.callbackFromParent({ home: false });
+    window.scrollTo(0, 0);
+  }
+
   formSubmited (e) {
     this.setState({ formSubmited: true });
+    window.scrollTo(0, 300);
   }
 
   render () {
     const Submited = this.state.formSubmited;
-
-    console.log(Submited);
 
     let form;
 

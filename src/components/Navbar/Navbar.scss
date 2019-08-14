@@ -7,9 +7,27 @@
   padding-bottom: 18px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+  align-items: center;  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.5s;
+
+  &__transparent {
+    background-color: $gray;
+    box-shadow: none;
+
+    .navbarLinkLeft,
+    .navbarLinkRight .navbarLinkItem {
+      opacity: 0;
+    }
+  }
+
+  &__wrapper {
+    height: 116px;
+  }
 }
 
 .logoContainer {
