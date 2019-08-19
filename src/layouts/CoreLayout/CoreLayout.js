@@ -37,7 +37,7 @@ class CoreLayout extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      listDataFromChild: null,
+      listDataFromChild: '',
       activeClass: ''
     };
     this.myCallback = this.myCallback.bind(this);
@@ -60,6 +60,10 @@ class CoreLayout extends Component {
   }
 
   render () {
+    if (this.state.listDataFromChild === true && window.scrollY === 0) {
+      this.state.activeClass = 'navbar__transparent';
+    }
+
     return (
       <Router>
         <div>
