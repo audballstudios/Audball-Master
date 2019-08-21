@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.section_calltoaction {
+    padding-top: 156px;
+    padding-bottom: 164px;
+    background-image: linear-gradient(to bottom, #eeeae6, #ecd596);
+}
+
+.calltoaction {
+    text-align: center;
+
+    &__title {
+        font-size: 35px;
+        font-weight: $font-bold;
+        line-height: 1.14;
+        margin-bottom: 40px;
+    }
+
+    &__chatBtn {
+        width: 572px;
+        height: 55.9px;
+        border-radius: 28.5px;
+        background-color: $red;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: $font-bold;
+        color: $white;
+        line-height: 55px;
+        text-decoration: none;
+    }
+}

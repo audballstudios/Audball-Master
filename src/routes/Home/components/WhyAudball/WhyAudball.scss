@@ -1,0 +1,66 @@
+@import '../../../../styles/variables';
+
+.section_whyaudball {
+    padding-top: 46px;
+    padding-bottom: 46px;
+    background-color: $base-color;
+    display: flex;
+    justify-content: center;
+}
+
+.inner_container {
+    width: 925px;
+    background-color: $gray;
+    padding: 40px 103px 57px 50px;
+    position: relative;
+    margin-right: 246px;
+
+    .header_main {
+        .header_underlined {
+            font-size: 40px;
+            text-align: left;
+        }
+
+        .header_underlined_line {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    .why_audball {
+        &__text {
+            font-size: 22px;
+            line-height: 1.14;
+            margin-bottom: 47px;
+            padding-top: 1px;
+        }
+
+        &__aboutmeBtn {
+            width: 199px;
+            height: 45px;
+            border-radius: 25px;
+            background-color: $red;
+            font-size: 24px;
+            color: $white;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            line-height: 45px;
+        }
+
+        &__pic {
+            position: absolute;
+            top: -16px;
+            border: 7px solid #eeeae6;
+            border-radius: 50%;
+            right: -246px;
+            background-color: #eeeae6;
+        }
+
+        &__signature {
+            position: absolute;
+            top: 340px;
+            right: -241px;
+        }
+    }
+}

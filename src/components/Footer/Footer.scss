@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+
+.footer {
+
+    &__main {
+        background-color: $footer-bg;
+        padding-top: 45px;
+        padding-bottom: 54px;
+        display: flex;
+        justify-content: center;
+
+        &__logo {
+            display: inline-block;
+            height: 85px;
+            width: 83px;
+
+            &_col {
+                text-align: center;
+                margin-right: 126px;
+                margin-top: 15px;
+            }
+
+            &_name {
+                font-size: 20px;
+                color: $gray;
+                margin-top: 10px;
+            }
+        }
+
+        &__link {
+            font-size: 22px;
+            color: $gray;
+            margin-bottom: 5px;
+
+            a {
+                color: $gray;
+                text-decoration: none;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &__wrapper {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+        }
+    }
+
+    &__second {
+        height: 59px;
+        background-color: $base-color;
+        font-size: 16px;
+        color: $gray;
+        text-align: center;
+        line-height: 59px;
+    }
+}
+
+.col-capabilites {
+    margin-right: 43px;
+}
+
+.col-reviews {
+    margin-right: 64px;
+}
+
+.col-aboutme {
+    margin-right: 77px;
+}
+
+.social_icons {
+    margin-top: 52px;
+
+    &__link {
+        margin-right: 29px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import '../../../../styles/variables';
+
+.aboutme__bottomSection {
+
+    &__sectionRow {
+        margin-top: 60px;
+
+        &__details {
+            width: 894px;
+            font-size: 20px;
+            line-height: 1.2;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__boxRow {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__boxCol {
+            width: 300px;
+            height: 300px;
+            padding: 22px;
+            border-radius: 10px;
+            box-shadow: 0 2px 13px 0 #eeeae6;
+            background-color: #ffffff;
+            margin-right: 80px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &__imgWrapper {
+            width: 256px;
+            height: 214px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__boxText {
+            height: 42px;
+            font-size: 20px;
+            text-align: center;
+            color: #01414b
+        }
+    }
+}
