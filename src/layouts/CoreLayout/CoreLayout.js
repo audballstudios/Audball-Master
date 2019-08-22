@@ -38,7 +38,8 @@ class CoreLayout extends Component {
     super(props);
     this.state = {
       listDataFromChild: '',
-      activeClass: ''
+      activeClass: '',
+      isMobile: false
     };
     this.myCallback = this.myCallback.bind(this);
   }
@@ -48,6 +49,10 @@ class CoreLayout extends Component {
   }
 
   componentDidMount () {
+    if (window.innerWidth <= 767) {
+      this.setState({ isMobile: true });
+    }
+
     window.addEventListener('scroll', () => {
       if (this.state.listDataFromChild === true) {
         let activeClass = '';
@@ -64,10 +69,15 @@ class CoreLayout extends Component {
       this.state.activeClass = 'navbar__transparent';
     }
 
+    const { isMobile } = this.state;
+
     return (
       <Router>
         <div>
-          <Navbar activeclassname={this.state.activeClass} />
+          <Navbar
+            activeclassname={this.state.activeClass}
+            isMobile={isMobile}
+          />
           {routes.map((route, i) => (
             <Route
               path={route.path}

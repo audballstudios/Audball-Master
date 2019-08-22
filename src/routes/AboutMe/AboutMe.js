@@ -28,7 +28,7 @@ class AboutMe extends Component {
             <img src={audrey} alt="audrey" className="aboutme__topSection__pic__img" />
             <img src={signature} alt="signature" className="aboutme__topSection__pic__signature" />
           </div>
-          <img src={arrow} className="aboutme__downArrow" />
+          <img src={arrow} alt="downArrow" className="aboutme__downArrow" />
         </div>
         <div className="aboutme__bottomSection">
           {AboutConfig.map((item, key) => (

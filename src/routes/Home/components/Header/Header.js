@@ -11,10 +11,9 @@ class Header extends Component {
         <div className="headerText headerSecondText">          
           <ul className="content__container__list">
             <li className="content__container__list__item">brands and websites by design.</li>
-            <li className="content__container__list__item">modern website designs.</li>
-            <li className="content__container__list__item">digital products that scale.</li>
-            <li className="content__container__list__item">brands people love as much as their owners do.</li>
             <li className="content__container__list__item">logos people remember.</li>
+            <li className="content__container__list__item">modern website designs.</li>
+            <li className="content__container__list__item">brands people love as much as their owners do.</li>
           </ul>
         </div>
       </div>

@@ -3,8 +3,8 @@
 .navbar {
   background-color: #ffffff;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 6px;
+  padding-bottom: 9px;
   display: flex;
   justify-content: center;
   align-items: center;  
@@ -26,7 +26,7 @@
   }
 
   &__wrapper {
-    height: 116px;
+    height: 83px;
   }
 }
 
@@ -34,6 +34,8 @@
   
   .logo {
     display: block;
+    width: 66px;
+    height: 68px;
   }
 }
 

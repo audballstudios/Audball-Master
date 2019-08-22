@@ -44,7 +44,7 @@ class Testimonials extends Component {
     }];
 
     return (
-      <div className="section_testimonials">
+      <div className="section_testimonials" id="reviews">
         <HeaderUnderlined title="Happy Customers" />
         <div className="testimonials__wrapper">
           {testimonialList.map((item, key) => (

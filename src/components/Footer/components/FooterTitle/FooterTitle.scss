@@ -9,6 +9,11 @@
     &_underlined {
         font-size: 22px;
         color: #eeeae6;
+
+        a { 
+            text-decoration: none;           
+            color: #eeeae6;
+        }
         
         &_line {
             height: 2px;

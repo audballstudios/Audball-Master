@@ -1,4 +1,5 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .section_whyaudball {
     padding-top: 46px;
@@ -6,6 +7,11 @@
     background-color: $base-color;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+        background-color: $gray;
+        padding: 27px 21px;
+    }
 }
 
 .inner_container {
@@ -15,15 +21,36 @@
     position: relative;
     margin-right: 246px;
 
+    @include mobile {
+        background-color: $base-color;
+        color: $gray;
+        padding: 38px 20px 26px 20px;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
     .header_main {
         .header_underlined {
             font-size: 40px;
             text-align: left;
+
+            @include mobile {
+                font-size: 28px;
+                text-align: center;
+                font-weight: $font-light;
+            }
         }
 
         .header_underlined_line {
             margin-left: 0;
             margin-top: 20px;
+
+            @include mobile {
+                margin-left: auto;
+                margin-top: 7px;
+                width: 155px;
+            }
         }
     }
 
@@ -33,11 +60,20 @@
             line-height: 1.14;
             margin-bottom: 47px;
             padding-top: 1px;
+
+            @include mobile {
+                font-size: 18px;
+                line-height: 1.22;
+                margin-top: 38px;
+                margin-bottom: 37px;
+                font-weight: $font-light;
+            }
         }
 
         &__aboutmeBtn {
             width: 199px;
             height: 45px;
+            border: solid 3px $red;
             border-radius: 25px;
             background-color: $red;
             font-size: 24px;
@@ -45,7 +81,19 @@
             text-decoration: none;
             display: inline-block;
             text-align: center;
-            line-height: 45px;
+            line-height: 39px;
+
+            &:hover {
+                color: $red;
+                background-color: transparent;
+            }
+
+            @include mobile {
+                width: 161px;
+                height: 35px;
+                font-size: 18px;
+                line-height: 35px;
+            }
         }
 
         &__pic {
@@ -55,12 +103,31 @@
             border-radius: 50%;
             right: -246px;
             background-color: #eeeae6;
+
+            @include mobile {
+                position: unset;
+                width: 191px;
+                height: 188px;
+                border: 4px solid #eeeae6;
+                margin-top: 35px;
+            }
         }
 
         &__signature {
             position: absolute;
             top: 340px;
             right: -241px;
+
+            @include mobile {
+                position: relative;
+                top: 0px;
+                right: auto;
+                width: 114px;
+                display: block;
+                left: 50%;
+                margin-left: -31px;
+                margin-top: 9px;
+            }
         }
     }
 }

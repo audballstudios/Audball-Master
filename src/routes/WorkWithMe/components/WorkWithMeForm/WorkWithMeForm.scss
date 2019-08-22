@@ -98,14 +98,19 @@
 .form_submitBtn {
     height: 55.9px;
     border-radius: 30px;
+    border: solid 3px $red;
     background-color: $red;
     width: 100%;
     font-size: 24px;
     font-weight: $font-bold;
     color: $white;
-    border: 0;
     cursor: pointer;
     outline: 0;
     text-transform: uppercase;
     font-family: 'Sofia Pro';
+
+    &:hover {
+        color: $red;
+        background-color: transparent;
+    }
 }

@@ -20,7 +20,7 @@ class WorkWithMeForm extends Component {
             <input type="text" className="form_input" />
           </div>
           <div className="form_group">
-            <label className="form_label">Phone Number</label>
+            <label className="form_label">Project Summary</label>
             <textarea className="form_input" />
           </div>
           <div className="form_group">

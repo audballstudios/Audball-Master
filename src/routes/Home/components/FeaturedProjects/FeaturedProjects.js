@@ -115,7 +115,7 @@ class FeaturedProjects extends Component {
     }];
 
     return (
-      <div className="section_featured_projects">
+      <div className="section_featured_projects" id="projects">
         <HeaderUnderlined title="Featured Projects" />
         <div className="projects_row first_row">
           {FeaturedProjects1.map((item, key) => (

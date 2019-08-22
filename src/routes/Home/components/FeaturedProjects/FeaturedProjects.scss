@@ -1,4 +1,5 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .section_featured_projects {
     padding-top: 30px;
@@ -11,22 +12,40 @@
 
     &.first_row {
         animation:slide-left 60s linear infinite;
+
+        @include mobile {
+            animation:slide-left-mobile 40s linear infinite;
+        }
     }
 
     &.second_row {
         margin-top: 25px;
         animation:slide-right 40s linear infinite;
+
+        @include mobile {
+            margin-top: 13px;
+            animation:slide-right-mobile 40s linear infinite;
+        }
     }
 
     &__img {
         display: block;
         transition: opacity 0.5s;
+
+        @include mobile {
+            width: 224px;
+            height: 137px;
+        }
     }
 
     &__item {
         margin-right: 30px;
         position: relative;
         cursor: pointer;
+
+        @include mobile {
+            margin-right: 17px;
+        }
 
         &__overlay {
             position: absolute;
@@ -65,22 +84,36 @@
 
 @keyframes slide-left {
     0% {
-        //transform: translateX(0);
         margin-left: 0;
     } 
     100% {
-        //transform: translateX(-100%);
         margin-left: -1756px;
     } 
 }
 
 @keyframes slide-right {
     0% {
-        //transform: translateX(0);
         margin-left: -1756px;
     } 
     100% {
-        //transform: translateX(-100%);
+        margin-left: 0;
+    } 
+}
+
+@keyframes slide-left-mobile {
+    0% {
+        margin-left: 0;
+    } 
+    100% {
+        margin-left: -964px;
+    } 
+}
+
+@keyframes slide-right-mobile {
+    0% {
+        margin-left: -964px;
+    } 
+    100% {
         margin-left: 0;
     } 
 }
