@@ -84,7 +84,7 @@ class CoreLayout extends Component {
               key={i}
               exact
               render={props => (
-                <route.component callbackFromParent={this.myCallback} {...props} routes={route.routes} />
+                <route.component callbackFromParent={this.myCallback} isMobile={isMobile} {...props} routes={route.routes} />
               )}
             />
           ))}

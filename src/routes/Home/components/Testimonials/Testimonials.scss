@@ -1,8 +1,14 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .section_testimonials {
     padding-top: 40px;
     padding-bottom: 60px;
+
+    @include mobile {
+        padding-top: 26px;
+        padding-bottom: 23px;
+    }
 }
 
 
@@ -12,6 +18,12 @@
         display: flex;
         justify-content: center;
         margin-top: 60px;
+
+        @include mobile {
+            height: 274px !important;
+            z-index: 0;
+            margin-top: 23px;
+        }
     }
 
     &__item {
@@ -22,6 +34,14 @@
             margin-right: 0;
         }
 
+        @include mobile {
+            width: 100%;
+            margin-bottom: 0;
+            padding-left: 29px;
+            padding-right: 29px;
+    
+        }
+
         &__card {
             border-radius: 10px;
             background-color: $white;
@@ -30,21 +50,40 @@
             box-shadow: 0 2px 8px 0 #eeeeee;  
             display: block;
             color: $font-color-base;
-            text-decoration: none;   
+            text-decoration: none;
+
+            @include mobile {
+                padding: 20px 23px 25px 30px;
+            }
 
             &__text {
                 font-size: 16px;
                 font-family: 'New York Small';
+
+                @include mobile {
+                    font-size: 18px;
+                    line-height: 1;
+                    height: 132px;
+                }
             }
 
             &__quote {
                 margin-bottom: 5px;
+
+                @include mobile {
+                    width: 20px;
+                    margin-bottom: -2px;
+                }
             }
 
             &__user_info {
                 margin-top: 20px;
                 display: flex;
                 align-items: center;
+
+                @include mobile {
+                    margin-top: 0;
+                }
 
                 &__avatar {
                     width: 50px;
@@ -56,17 +95,33 @@
                     text-align: center;
                     line-height: 50px;
                     margin-right: 10px;
+
+                    @include mobile {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 25px;
+                    }
                 }
 
                 &__name {
                     font-size: 16px;
                     font-weight: $font-bold;
 
+                    @include mobile {
+                        font-size: 18px;
+                        line-height: 0.83;
+                    }
+
                     p {
                         font-size: 14px;
                         font-weight: $font-light;
                         margin-top: 2px;
                         margin-bottom: 0;
+
+                        @include mobile {
+                            font-size: 18px;
+                        }
                     }
                 }
             }

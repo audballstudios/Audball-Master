@@ -1,14 +1,23 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .footerTitle {
 
     &_main {        
         margin-bottom: 9px;
+
+        @include mobile {
+            margin-bottom: 6px;
+        }
     }
 
     &_underlined {
         font-size: 22px;
         color: #eeeae6;
+
+        @include mobile {
+            font-size: 18px;
+        }
 
         a { 
             text-decoration: none;           
@@ -19,6 +28,10 @@
             height: 2px;
             background-color: $red;
             margin-top: 7px;
+
+            @include mobile {
+                margin-top: 2px;
+            }
         }
     }
 }
