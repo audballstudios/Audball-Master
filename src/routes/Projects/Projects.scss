@@ -4,12 +4,11 @@
 
     &__topSection {
         background-color: $gray;
-        padding-top: 45px;
-        padding-bottom: 28px;
+        padding-bottom: 44px;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 265px;
+        min-height: 298px;
 
         &__name {
             width: 430px;
@@ -38,6 +37,7 @@
             font-size: 22px;
             line-height: 1.09;
             white-space: pre-line;
+            margin-bottom: 15px;
         }
     }
 

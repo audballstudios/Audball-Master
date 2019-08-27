@@ -11,7 +11,7 @@ import './WhyAudball.scss';
 class WhyAudball extends Component {
   render () {
     return (
-      <div className="section_whyaudball">
+      <div className="section_whyaudball" id="aboutMe">
         <div className="inner_container">
           <HeaderUnderlined title="Why Audball Studios" />
           <div className="why_audball__text">

@@ -31,7 +31,7 @@ class Capabilities extends Component {
     }];
 
     return (
-      <div className="section_capabilities">
+      <div className="section_capabilities" id="capabilities">
         <HeaderUnderlined title="Capabilities" />
         <div className="capabilities__wrapper">
           {capabilityList.map((item, key) => (

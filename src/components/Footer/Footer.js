@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import FooterTitle from './components/FooterTitle/FooterTitle';
+import AppPaths from '../../AppPaths';
 
 import footerLogo from '../../img/footer-logo.png';
 import facebookIcon from '../../img/social-icons/facebook.png';
@@ -83,7 +83,7 @@ class Footer extends Component {
           </div>
 
           <div className="footer__main_col col-aboutme">
-            <FooterTitle title="About me" lineWidth="94" />
+            <FooterTitle title="About me" url={AppPaths.ABOUT_PATH} lineWidth="94" />
           </div>
 
           <div className="footer__main_col col-contact">

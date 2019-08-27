@@ -20,10 +20,10 @@ class WorkWithMeForm extends Component {
             <input type="text" className="form_input" />
           </div>
           <div className="form_group">
-            <label className="form_label">Phone Number</label>
+            <label className="form_label">Project Summary</label>
             <textarea className="form_input" />
           </div>
-          <div className="form_group">
+          <div className="form_group services_needed">
             <label className="form_label">Services Needed <small>(check all that apply):</small></label>
             <div className="services_row">
               <div className="services_col">

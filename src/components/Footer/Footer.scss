@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .footer {
 
@@ -9,21 +10,46 @@
         display: flex;
         justify-content: center;
 
+        @include mobile {
+            flex-direction: column;
+            padding-top: 38px;
+            padding-left: 31px;
+            padding-right: 31px;
+            padding-bottom: 34px;
+            position: relative;
+        }
+
         &__logo {
             display: inline-block;
             height: 85px;
             width: 83px;
 
+            @include mobile  {
+                height: 57px;
+                width: 57px;
+            }
+
             &_col {
                 text-align: center;
                 margin-right: 126px;
                 margin-top: 15px;
+
+                @include mobile {
+                    position: absolute;
+                    top: 12px;
+                    right: 30px;
+                    margin-right: 0;
+                }
             }
 
             &_name {
                 font-size: 20px;
                 color: $gray;
                 margin-top: 10px;
+
+                @include mobile {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -31,6 +57,11 @@
             font-size: 22px;
             color: $gray;
             margin-bottom: 5px;
+
+            @include mobile {
+                font-size: 18px;
+                margin-bottom: 3px;
+            }
 
             a {
                 color: $gray;
@@ -56,29 +87,64 @@
         color: $gray;
         text-align: center;
         line-height: 59px;
+
+        @include mobile {
+            display: none;
+        }
     }
 }
 
 .col-capabilites {
     margin-right: 43px;
+
+    @include mobile {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }
 
 .col-reviews {
     margin-right: 64px;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .col-aboutme {
     margin-right: 77px;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .social_icons {
     margin-top: 52px;
+    
+    @include mobile {
+        margin-top: 23px;
+    }
 
     &__link {
         margin-right: 29px;
 
+        @include mobile {
+            margin-right: 44px;
+        }
+
         &:last-child {
             margin-right: 0;
+        }
+
+        img {
+            width: 34px;
+            height: 34px;
+
+            @include mobile {
+                width: 51px;
+                height: 51px;
+            }
         }
     }
 }

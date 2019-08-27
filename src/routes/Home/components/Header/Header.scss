@@ -1,27 +1,41 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .topHeaderContainer {
-    height: 428px;
+    height: 461px;
     background-color: $gray;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include mobile {
+      height: 264px;
+    }
 }
 
 .headerText {
     font-size: 35px;
     line-height: 1.34;
     text-align: center;
+
+    @include mobile {
+      font-size: 30px;
+    line-height: normal;
+    }
 }
 
 .headerSecondText {
     color: $red;
     // border-bottom: 4px solid $heading-line;
-    height: 41px;
     overflow: hidden;
     text-align: center;
-    margin-bottom: 112px;
+    margin-bottom: 81px;
+
+    @include mobile {
+      height: 60px;
+      margin-bottom: 0;
+    }
 }
 
 .content {
@@ -32,71 +46,22 @@
         margin: 0;
         padding-left: 0;
         list-style: none;
+        min-height: 41px !important;
+        width: 850px !important;  
+        z-index: 0;
         
-        -webkit-animation-name: change;
-        -webkit-animation-duration: 10s;
-        -webkit-animation-iteration-count: infinite;
-        animation-name: change;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
+        @include mobile {
+          width: 414px !important;
+        }
   
         &__item {
-          line-height:40px;
           margin:0;
+
+          @include mobile {
+            line-height: 1.03;
+            height: 60px;
+          }
         }
       }
     }
   }
-
-  
-  @-webkit-keyframes change {
-    0%, 7.5%, 100% {transform:translate3d(0,0,0);}
-    12.5%, 20% {transform:translate3d(0,-20%,0);}
-    25%, 32.5% {transform:translate3d(0,-40%,0);}
-    37.5%, 45% {transform:translate3d(0,-60%,0);}
-    50%, 57.5% {transform:translate3d(0,-80%,0);}
-    62.5%, 70% {transform:translate3d(0,-60%,0);}
-    75%, 82.5%  {transform:translate3d(0,-40%,0);}
-    87.5%, 95% {transform:translate3d(0,-20%,0);}
-  }
-  
-  @-o-keyframes change {
-    0%, 7.5%, 100% {transform:translate3d(0,0,0);}
-    12.5%, 20% {transform:translate3d(0,-20%,0);}
-    25%, 32.5% {transform:translate3d(0,-40%,0);}
-    37.5%, 45% {transform:translate3d(0,-60%,0);}
-    50%, 57.5% {transform:translate3d(0,-80%,0);}
-    62.5%, 70% {transform:translate3d(0,-60%,0);}
-    75%, 82.5%  {transform:translate3d(0,-40%,0);}
-    87.5%, 95% {transform:translate3d(0,-20%,0);}
-  }
-   
-  @-moz-keyframes change {
-    0%, 7.5%, 100% {transform:translate3d(0,0,0);}
-    12.5%, 20% {transform:translate3d(0,-20%,0);}
-    25%, 32.5% {transform:translate3d(0,-40%,0);}
-    37.5%, 45% {transform:translate3d(0,-60%,0);}
-    50%, 57.5% {transform:translate3d(0,-80%,0);}
-    62.5%, 70% {transform:translate3d(0,-60%,0);}
-    75%, 82.5%  {transform:translate3d(0,-40%,0);}
-    87.5%, 95% {transform:translate3d(0,-20%,0);}
-  }
-  
-  @keyframes change {
-    // 0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-    // 16.66%, 29.32% {transform:translate3d(0,-25%,0);}
-    // 33.32%,45.98% {transform:translate3d(0,-50%,0);}
-    // 49.98%,62.64% {transform:translate3d(0,-75%,0);}
-    // 66.64%,79.3% {transform:translate3d(0,-50%,0);}
-    // 83.3%,95.96% {transform:translate3d(0,-25%,0);}
-    
-    0%, 7.5%, 100% {transform:translate3d(0,0,0);}
-    12.5%, 20% {transform:translate3d(0,-20%,0);}
-    25%, 32.5% {transform:translate3d(0,-40%,0);}
-    37.5%, 45% {transform:translate3d(0,-60%,0);}
-    50%, 57.5% {transform:translate3d(0,-80%,0);}
-    62.5%, 70% {transform:translate3d(0,-60%,0);}
-    75%, 82.5%  {transform:translate3d(0,-40%,0);}
-    87.5%, 95% {transform:translate3d(0,-20%,0);}
-  }
-  

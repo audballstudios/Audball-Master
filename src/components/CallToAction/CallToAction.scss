@@ -1,9 +1,14 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .section_calltoaction {
     padding-top: 156px;
     padding-bottom: 164px;
     background-image: linear-gradient(to bottom, #eeeae6, #ecd596);
+
+    @include mobile {
+        padding: 96px 20px 100px 20px;
+    }
 }
 
 .calltoaction {
@@ -14,18 +19,39 @@
         font-weight: $font-bold;
         line-height: 1.14;
         margin-bottom: 40px;
+
+        @include mobile {
+            font-size: 28px;
+            font-weight: $font-regular;
+            line-height: 1.11;
+            margin-bottom: 25px;
+        }
     }
 
     &__chatBtn {
         width: 572px;
         height: 55.9px;
+        border: solid 3px $red;
         border-radius: 28.5px;
         background-color: $red;
         display: inline-block;
         font-size: 24px;
         font-weight: $font-bold;
         color: $white;
-        line-height: 55px;
+        line-height: 49px;
         text-decoration: none;
+
+        &:hover {
+            color: $red;
+            background-color: transparent;
+        }
+
+        @include mobile {
+            width: 100%;
+            height: 46px;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 46px;
+        }
     }
 }

@@ -1,9 +1,14 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .section_capabilities {
     background-color: $gray;
     padding-top: 40px;
     padding-bottom: 60px;
+
+    @include mobile { 
+        padding-bottom: 63px;
+    }
 }
 
 .capabilities {
@@ -12,11 +17,27 @@
         display: flex;
         justify-content: center;
         margin-top: 88px;
+
+        @include mobile { 
+            flex-direction: column;
+            margin-top: 63px;
+        }
     }
 
     &__item {
         width: 230px;
         margin-right: 35px;
+
+        @include mobile {
+            width: calc( 100% - 80px);
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-bottom: 52px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
 
         &:last-child {
             margin-right: 0;
@@ -29,6 +50,12 @@
             padding: 66px 14px 14px 14px;
             position: relative;
 
+            @include mobile {
+                border-radius: 15px;
+                height: 239px;
+                padding: 59px 17px 14px 32px;
+            }
+
             &__circle {
                 width: 94px;
                 height: 94px;
@@ -37,6 +64,13 @@
                 position: absolute;
                 left: 14px;
                 top: -41px;
+
+                @include mobile { 
+                    width: 80px;
+                    height: 80px;
+                    left: 15px;
+                    top: -33px;
+                }
             }
 
             &__category {
@@ -49,12 +83,22 @@
                 font-size: 20px;
                 font-weight: $font-bold;
                 height: 82px;
+
+                @include mobile { 
+                    font-size: 22px;
+                    height: 44px;
+                }
             }
 
             &__includes {
                 font-size: 18px;
                 line-height: 1.06;
                 position: relative;
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 1.13;
+                }
 
                 p {
                     margin-top: 0;
@@ -69,6 +113,10 @@
                 position: absolute;
                 left: -14px;
                 top: 0;
+
+                @include mobile {
+                    left: -32px;
+                }
             }
         }
         
