@@ -62,7 +62,11 @@
     }
 
     .form_input:not(textarea) {
-        height: 55.9px;    
+        height: 55.9px;  
+        
+        @include mobile {
+            height: 57px;
+        }
     }
 
     textarea.form_input {
@@ -141,6 +145,7 @@
     @include mobile {
         height: 46px;
         font-size: 18px;
+        margin-top: 7px;
     }
 }
 

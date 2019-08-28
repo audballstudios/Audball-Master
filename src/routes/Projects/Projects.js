@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProjectsConfig from './ProjectsConfig';
 import HeaderUnderlined from '../../components/HeaderUnderlined/HeaderUnderlined';
 
@@ -11,7 +12,7 @@ class Projects extends Component {
   }
 
   render () {
-    const { match } = this.props;
+    const { match, isMobile } = this.props;
     const projectId = match.params.id;
 
     return (
@@ -21,13 +22,12 @@ class Projects extends Component {
             <div className="project__topSection">
               <div className="project__topSection__name">
                 <HeaderUnderlined title={item.title} />
-                <div className="project__topSection__brif">
-                  {item.brif}
-                </div>
+                { !isMobile && <div className="project__topSection__brif">{item.brif}</div> }
               </div>
               <div className="project__topSection__details">
                 {item.details}
               </div>
+              { isMobile && <div className="project__topSection__brif">{item.brif}</div> }
             </div>
             <div className="project__screenshots">
               {item.images.map((item, key) => (
@@ -40,5 +40,9 @@ class Projects extends Component {
     );
   }
 }
+
+Projects.propTypes = {
+  isMobile: PropTypes.bool.isRequired
+};
 
 export default Projects;

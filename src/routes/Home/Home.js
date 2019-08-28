@@ -19,8 +19,8 @@ class Home extends Component {
     const { isMobile } = this.props;
     return (
       <div>
-        <Header />
-        <FeaturedProjects />
+        <Header isMobile={isMobile} />
+        <FeaturedProjects isMobile={isMobile} />
         <Capabilities />
         <Testimonials isMobile={isMobile} />
         <WhyAudball />

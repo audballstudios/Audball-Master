@@ -5,6 +5,10 @@
     padding-top: 30px;
     padding-bottom: 30px;
     overflow: hidden;
+
+    @include mobile {        
+        padding-bottom: 40px;
+    }
 }
 
 .projects_row {
@@ -80,6 +84,23 @@
             opacity: 1;
         }
     }
+}
+
+.projects__viewAllBtn {
+    font-size: 18px;
+    font-weight: $font-bold;
+    color: $white;
+    background-color: $red;
+    width: 161px;
+    height: 35px;
+    border-radius: 15.5px;
+    line-height: 35px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
 }
 
 @keyframes slide-left {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import AppPaths from '../../AppPaths';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -11,17 +10,8 @@ import NavbarMobile from '../NavbarMobile/NavbarMobile';
 import logo from '../../img/logo.png';
 
 class Navbar extends Component {
-  state = {
-    visible: false,
-    show: false,
-    searchShow: false,
-    hamburgerActive: false
-  };
-  handleToggleMobile = () => this.setState((prevState) => ({ show: !prevState.show, hamburgerActive: !prevState.hamburgerActive }));
-
   render () {
     const { activeclassname, isMobile } = this.props;
-    const { show, hamburgerActive } = this.state;
 
     const scrollWithOffset = (el, offset) => {
       const elementPosition = el.offsetTop - offset;
@@ -33,7 +23,7 @@ class Navbar extends Component {
     };
 
     if (isMobile) {
-      return (<NavbarMobile onToggleMobile={this.handleToggleMobile} hamburgerActive={hamburgerActive} show={show} />);
+      return (<NavbarMobile />);
     }
     return (
       <div className="navbar__wrapper">
