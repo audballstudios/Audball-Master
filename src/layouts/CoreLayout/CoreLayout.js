@@ -7,6 +7,7 @@ import Home from '../../routes/Home/Home';
 import AboutMe from '../../routes/AboutMe/AboutMe';
 import WorkWithMe from '../../routes/WorkWithMe/WorkWithMe';
 import Projects from '../../routes/Projects/Projects';
+import ProjectsListMobile from '../../routes/ProjectsListMobile/ProjectsListMobile';
 import './CoreLayout.scss';
 import '../../styles/styles.scss';
 
@@ -30,6 +31,10 @@ const routes = [
   {
     path: AppPaths.PROJECTS_PATH + '/:id',
     component: Projects
+  },
+  {
+    path: AppPaths.FEATUREDPROJECTS_PATH,
+    component: ProjectsListMobile
   }
 ];
 
@@ -48,11 +53,13 @@ class CoreLayout extends Component {
     this.setState({ listDataFromChild: dataFromChild.home });
   }
 
-  componentDidMount () {
+  componentWillMount () {
     if (window.innerWidth <= 767) {
       this.setState({ isMobile: true });
     }
+  }
 
+  componentDidMount () {
     window.addEventListener('scroll', () => {
       if (this.state.listDataFromChild === true) {
         let activeClass = '';

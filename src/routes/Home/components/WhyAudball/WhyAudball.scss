@@ -82,6 +82,7 @@
             display: inline-block;
             text-align: center;
             line-height: 39px;
+            font-weight: $font-bold;
 
             &:hover {
                 color: $red;
@@ -92,7 +93,7 @@
                 width: 161px;
                 height: 35px;
                 font-size: 18px;
-                line-height: 35px;
+                line-height: 30px;
             }
         }
 

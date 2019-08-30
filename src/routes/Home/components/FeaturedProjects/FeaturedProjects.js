@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import HeaderUnderlined from '../../../../components/HeaderUnderlined/HeaderUnderlined';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import AppPaths from '../../../../AppPaths';
 
 import pv from '../../../../img/projects-thumbs/pv-1.png';
 import trueNorth from '../../../../img/projects-thumbs/true-north-3.png';
@@ -16,6 +18,8 @@ import './FeaturedProjects.scss';
 
 class FeaturedProjects extends Component {
   render () {
+    const { isMobile } = this.props;
+
     const FeaturedProjects1 = [{
       slug: 'casa-planta',
       name: 'Casa Planta',
@@ -139,9 +143,16 @@ class FeaturedProjects extends Component {
             </Link>
           ))}
         </div>
+
+        { isMobile && <Link to={AppPaths.FEATUREDPROJECTS_PATH} className="projects__viewAllBtn">View all</Link> }
+
       </div>
     );
   }
 }
+
+FeaturedProjects.propTypes = {
+  isMobile: PropTypes.bool.isRequired
+};
 
 export default FeaturedProjects;

@@ -11,6 +11,8 @@
 
     @include mobile {
       height: 264px;
+      display: block;
+      padding-top: 61px;
     }
 }
 
@@ -52,6 +54,8 @@
         
         @include mobile {
           width: 414px !important;
+          margin-left: auto;
+          margin-right: auto;
         }
   
         &__item {
@@ -64,4 +68,20 @@
         }
       }
     }
+  }
+
+  .topHeader__chatBtn {
+    font-size: 18px;
+    color: $white;
+    background-color: $red;
+    width: 161px;
+    height: 35px;
+    border-radius: 15.5px;
+    line-height: 35px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 33px;
   }

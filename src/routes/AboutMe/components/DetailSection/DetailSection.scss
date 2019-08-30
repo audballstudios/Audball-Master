@@ -1,9 +1,16 @@
 @import '../../../../styles/variables';
+@import '../../../../styles/mixins';
 
 .aboutme__bottomSection {
 
     &__sectionRow {
         margin-top: 60px;
+
+        @include mobile {
+            margin-top: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
 
         &__details {
             width: 894px;
@@ -12,12 +19,24 @@
             text-align: center;
             margin-left: auto;
             margin-right: auto;
+
+            @include mobile {
+                width: 100%;
+                padding-left: 17px;
+                padding-right: 17px;
+                line-height: 1.1;
+            }
         }
 
         &__boxRow {
             margin-top: 60px;
             display: flex;
             justify-content: center;
+
+            @include mobile {
+                margin-top: 21px;
+                flex-direction: column;
+            }
         }
 
         &__boxCol {
@@ -32,6 +51,21 @@
             &:last-child {
                 margin-right: 0;
             }
+
+            @include mobile {
+                box-shadow: none;
+                margin-left: 29px;
+                margin-right: 29px;
+                margin-bottom: 20px;
+                width: auto;
+                height: 263px;
+
+                &:last-child {
+                    margin-right: 29px;
+                    margin-bottom: 0;
+                }
+    
+            }
         }
 
         &__imgWrapper {
@@ -40,6 +74,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include mobile {
+                width: auto;
+                height: 170px;
+            }
 
             img {
                 max-width: 100%;
@@ -51,6 +90,11 @@
             font-size: 20px;
             text-align: center;
             color: #01414b
+        }
+      
+        .header_underlined {
+            padding-left: 22px;
+            padding-right: 22px;
         }
     }
 }

@@ -109,7 +109,7 @@ class Testimonials extends Component {
           ))}
         </div> */}
 
-        {isMobile ?
+        {isMobile ? (
           <Carousel loop auto interval={5000} widgets={[IndicatorDots]} className="testimonials__wrapper">
             {testimonialListMobile.map((item, key) => (
               <div className="testimonials__item" key={key}>
@@ -134,7 +134,7 @@ class Testimonials extends Component {
               </div>
             ))}
           </Carousel>
-          :
+        ) : (
           <div className="testimonials__wrapper">
             {testimonialList.map((item, key) => (
               <div className="testimonials__item" key={key}>
@@ -159,7 +159,7 @@ class Testimonials extends Component {
               </div>
             ))}
           </div>
-        }
+        )}
       </div>
     );
   }

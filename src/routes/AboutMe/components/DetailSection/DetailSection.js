@@ -5,7 +5,7 @@ import HeaderUnderlined from '../../../../components/HeaderUnderlined/HeaderUnde
 import './DetailSection.scss';
 
 const DetailSection = ({ item }) => (
-  <div className="aboutme__bottomSection__sectionRow">
+  <div className={[item.class, 'aboutme__bottomSection__sectionRow'].join(' ')}>
     <HeaderUnderlined title={item.title} />
     <div className="aboutme__bottomSection__sectionRow__details">{item.details}</div>
     <div className="aboutme__bottomSection__sectionRow__boxRow">
