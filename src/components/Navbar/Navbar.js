@@ -64,8 +64,7 @@ class Navbar extends Component {
           <div className="navbarLinkRight">
             <ul className="navbarLinkWrapper">
               <li className="navbarLinkItem">
-                <Link to="/#aboutMe"
-                  scroll={el => scrollWithOffset(el, 83)}
+                <Link to={AppPaths.ABOUT_PATH}
                   className="navbarLink">
                     About me
                 </Link>

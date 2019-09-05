@@ -43,8 +43,7 @@ class MobileMenu extends Component {
             </Link>
           </li>
           <li className="mobileMenu__link__item">
-            <Link to="/#aboutMe"
-              scroll={el => scrollWithOffset(el, 47)}
+            <Link to={AppPaths.ABOUT_PATH}
               className="mobileMenu__link"
               onClick={this.props.onToggleMobile}>
               About me
