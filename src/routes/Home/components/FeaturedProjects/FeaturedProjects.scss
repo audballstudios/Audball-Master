@@ -82,6 +82,10 @@
 
         &:hover .projects_row__item__overlay {
             opacity: 1;
+
+            @include mobile {
+                opacity: 0;
+            }
         }
     }
 }
