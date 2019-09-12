@@ -6,38 +6,32 @@ $bold: '../fonts/Sofia-Pro-Bold/Sofia Pro Bold';
 
 @font-face {
   font-family: 'Sofia Pro';
-  src: url('#{$light}.eot'); /* IE9 Compat Modes */
-  src: url('#{$light}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('#{$light}.woff') format('woff'), /* Modern Browsers */
-        url('#{$light}.ttf')  format('truetype'), /* Safari, Android, iOS */
-        url('#{$light}.svg#65943740c25c4cb0404f4736aa9282c9') format('svg'); /* Legacy iOS */
-
-  font-style:   normal;
-  font-weight:  $font-light;
+  src:url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),
+  url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/d?subset_id=2&fvd=n4&v=3") format("woff"),
+  url("https://use.typekit.net/af/5855b2/00000000000000003b9b1a98/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: $font-light;
 }
 
 @font-face {
 	font-family: 'Sofia Pro';
-	src: url('#{$regular}.eot'); /* IE9 Compat Modes */
-	src: url('#{$regular}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('#{$regular}.woff') format('woff'), /* Modern Browsers */
-		  url('#{$regular}.ttf')  format('truetype'), /* Safari, Android, iOS */
-      url('#{$regular}.svg#65943740c25c4cb0404f4736aa9282c9') format('svg'); /* Legacy iOS */
-      
-	font-style:   normal;
-	font-weight:  $font-regular;
+	src:url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/l?subset_id=2&fvd=n5&v=3") format("woff2"),
+	url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/d?subset_id=2&fvd=n5&v=3") format("woff"),
+	url("https://use.typekit.net/af/b4d13d/00000000000000003b9b1a9a/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: $font-regular;
 }
 
 @font-face {
 	font-family: 'Sofia Pro';
-	src: url('#{$bold}.eot'); /* IE9 Compat Modes */
-	src: url('#{$bold}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		 url('#{$bold}.woff') format('woff'), /* Modern Browsers */
-		 url('#{$bold}.ttf')  format('truetype'), /* Safari, Android, iOS */
-		 url('#{$bold}.svg#65943740c25c4cb0404f4736aa9282c9') format('svg'); /* Legacy iOS */
-
-	font-style:   normal;
-	font-weight:  $font-bold;
+	src:url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+	url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),
+	url("https://use.typekit.net/af/30420e/00000000000000003b9b1a9e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+	font-display: auto;
+	font-style: normal;
+	font-weight: $font-bold;
   }
 
   @font-face {
