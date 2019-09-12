@@ -47,7 +47,7 @@
             border-radius: 10px;
             background-color: $white;
             height: 318px;
-            padding: 66px 14px 14px 14px;
+            padding: 61px 14px 14px 14px;
             position: relative;
 
             @include mobile {
@@ -82,7 +82,8 @@
             &__title {
                 font-size: 20px;
                 font-weight: $font-bold;
-                height: 82px;
+                height: 78px;
+                line-height: 1.1;
 
                 @include mobile { 
                     font-size: 22px;

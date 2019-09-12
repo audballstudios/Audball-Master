@@ -11,7 +11,7 @@
 
     .header_underlined {
         font-size: 35px;
-        font-weight: $font-bold;
+        font-weight: $font-regular;
         line-height: 1.14;
         text-align: center;
 
@@ -27,7 +27,7 @@
         background-color: $heading-line;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 8px;
+        margin-top: 13px;
 
         @include mobile {
             width: 85px;
