@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import AppPaths from '../../AppPaths';
 import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -91,7 +92,12 @@ class CoreLayout extends Component {
               key={i}
               exact
               render={props => (
-                <route.component callbackFromParent={this.myCallback} isMobile={isMobile} {...props} routes={route.routes} />
+                <route.component
+                  callbackFromParent={this.myCallback}
+                  isMobile={isMobile}
+                  {...props}
+                  routes={route.routes}
+                  env={this.props.env} />
               )}
             />
           ))}
@@ -100,6 +106,10 @@ class CoreLayout extends Component {
       </Router>
     );
   }
+};
+
+CoreLayout.propTypes = {
+  env: PropTypes.object.isRequired
 };
 
 export default CoreLayout;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import WorkWithMeForm from './components/WorkWithMeForm/WorkWithMeForm';
 import ThankYou from './components/ThankYou/ThankYou';
 
@@ -11,8 +12,6 @@ class WorkWithMe extends Component {
     this.state = {
       formSubmited: false
     };
-
-    this.formSubmited = this.formSubmited.bind(this);
   }
 
   componentDidMount () {
@@ -20,8 +19,8 @@ class WorkWithMe extends Component {
     window.scrollTo(0, 0);
   }
 
-  formSubmited (e) {
-    this.setState({ formSubmited: true });
+  getPropsFromChild = (formSubmited) => {
+    this.setState({ formSubmited: formSubmited });
     window.scrollTo(0, 300);
   }
 
@@ -33,7 +32,7 @@ class WorkWithMe extends Component {
     if (Submited) {
       form = <ThankYou />;
     } else {
-      form = <WorkWithMeForm formSubmited={this.formSubmited} />;
+      form = <WorkWithMeForm env={this.props.env} formSubmited={this.formSubmited} getPropsFromChild={this.getPropsFromChild} />;
     }
 
     return (
@@ -43,5 +42,9 @@ class WorkWithMe extends Component {
     );
   }
 }
+
+WorkWithMe.propTypes = {
+  env: PropTypes.object.isRequired
+};
 
 export default WorkWithMe;

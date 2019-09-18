@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import CoreLayout from './layouts/CoreLayout/CoreLayout';
 import * as serviceWorker from './serviceWorker';
+import { env } from './config';
 
-ReactDOM.render(<CoreLayout />, document.getElementById('root'));
+ReactDOM.render(<CoreLayout env={env} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

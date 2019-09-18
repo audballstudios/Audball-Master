@@ -21,8 +21,6 @@ class AboutMe extends Component {
   render () {
     const { isMobile } = this.props;
 
-    console.log('isMobile', isMobile);
-
     return (
       <div className="section_aboutme">
         <div className="aboutme__topSection">
